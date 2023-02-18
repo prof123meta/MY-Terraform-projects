@@ -10,11 +10,16 @@ terraform {
 
 provider "aws" {
   region     = "us-west-2"
-  access_key = "my-access-key"
-  secret_key = "my-secret-key"
+  access_key = "  "
+  secret_key = "  "
 }
 
 # Create a VPC
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16"
+resource "aws_vpc" "My-Terraform-VPC" {
+  cidr_block       = "11.0.0.0/16"
+  
+
+  tags = {
+    Name = "My-terra-vpc"
+  }
 }
